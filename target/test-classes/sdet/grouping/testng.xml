@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="grouping">
+  
+  
+      <groups>
+        <run>
+          <!--  include only sanity    <include name="sanity"></include>         -->
+          <!--  include only regression   <include name="regression"></include>   -->
+          <!-- include sanity and exlude regression   <include name="sanity"></include>
+          <exclude name="regression"></exclude>   -->
+         <!--  include all except sanity <exclude name="sanity"></exclude> -->
+         <include name="functional"></include>
+        </run>
+      </groups>
+  
+    <classes>
+      <class name="sdet.grouping.loginTests"/>
+      <class name="sdet.grouping.PaymentTests"/>
+      <class name="sdet.grouping.SignUpTests"/>
+    </classes>
+  </test> <!-- grouping -->
+</suite> <!-- Suite -->
